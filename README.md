@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ApniCar
+
+ApniCar is a smart web-based tool that leverages Machine Learning, specifically the K-Nearest Neighbors (KNN) algorithm, to predict car prices. By analyzing features such as mileage, age, and brand, ApniCar identifies similar vehicles in its dataset and provides an estimated price based on comparable data points. This helps users make more informed decisions when buying or selling cars.
+
+## Features
+
+- **Car Price Prediction:** Enter vehicle details (mileage, age, brand, etc.) to get an estimated price.
+- **KNN-Based Model:** Uses the K-Nearest Neighbors algorithm for accurate, data-driven predictions.
+- **User-Friendly Interface:** Simple web interface for quick and easy access.
+- **Informed Decisions:** Helps buyers and sellers with price estimates based on real data.
+
+## Technology Stack
+
+- **Frontend:** JavaScript, HTML, CSS
+- **Backend:** Python (KNN Machine Learning Model)
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.com/) (for the frontend)
+- [Python 3.x](https://www.python.org/) (for the backend)
+- Python dependencies (see below)
+
+### Installation
+
+#### 1. Clone the Repository
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/Divyansh-13/ApniCar.git
+cd ApniCar
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+#### 2. Setting Up & Running the Frontend
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```bash
+cd frontend   # Navigate to the frontend directory if present
+npm install
+npm run dev
+```
+The frontend will typically be available at [http://localhost:3000](http://localhost:3000).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+#### 3. Setting Up & Running the Backend
 
-## Learn More
+In a new terminal window:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+cd backend    # Navigate to the backend directory if present
+pip install -r requirements.txt   # Install Python dependencies
+python app.py
+```
+The backend will typically be available at [http://localhost:5000](http://localhost:5000).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Note:** If there are no separate `frontend` or `backend` folders, run the commands from the root or relevant directories. Adjust the above commands to fit your project structure.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Project Structure
 
-## Deploy on Vercel
+```
+ApniCar/
+├── backend/
+│   ├── app.py
+│   └── requirements.txt
+├── frontend/
+│   ├── [frontend files]
+│   └── package.json
+├── README.md
+└── ...
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Usage
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Open [http://localhost:3000](http://localhost:3000) in your browser.
+2. Enter your car's details (make, model, year, mileage, etc.).
+3. Receive an estimated market price for your vehicle.
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
+
+> **ApniCar** – Smart price prediction for cars using KNN and real-world data.
